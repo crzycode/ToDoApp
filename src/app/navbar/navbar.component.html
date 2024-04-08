@@ -1,0 +1,51 @@
+<div class="navbar_container" >
+    <div style="max-width: 1600px; margin: auto; height: 60px;">
+        <div class="row px-1 p-0 m-0 align-items-center w-100 h-100">
+            <div class="col-2">
+                <div class="desktop_menu  h-100 d-flex justify-content-center align-items-center" (click)="SwitchDrawer(true)">
+                    <img  src="http://localhost/icons/WhiteMenu.png" alt="" style="height: 30px;">
+                </div>
+            </div>
+          
+            <div class="col-8 position-relative p-0 h-100 d-flex justify-content-center align-items-center">
+                <span style="position: absolute;">TODOs</span>
+            </div>
+            <div class="col-2 d-flex justify-content-start h-100">
+                <div class="d-flex justify-content-center align-items-center">
+                    <img (click)="OpenCalendar()" style="height: 30px;" src="http://localhost/icons/calendar.png" alt="">
+                </div> 
+            </div>
+         
+        </div>
+    </div>
+</div>
+<Bitdrawer-v2 (Change)="SwitchDrawer($event)" [DrawerStyle]="{height:'100%',width:'80%','max-width':'400px',padding:'20px','background-color':'white'}" [Direction]="'left'" [Top]="'0px'" [Left]="'0px'" [Switch]="Switch">
+    <div class="d-flex h-100 ">
+        <div style="height: 100%; width: 80%; position: relative; top: 80px;">
+            <div class="row m-0 mt-1 mx-4 mb-5" (click)="Navigate('')" style="font-weight: 700;">
+                <span class="h-100 w-100 d-flex align-items-center">
+                   <span> <img style="height: 20px;" src="http://localhost/icons/home.png" alt=""></span>
+                    <span class="mx-3">Home</span>
+                </span>
+            </div>
+            <div class="row m-0 mt-1 mx-4 mb-5" (click)="Navigate('report')" style="font-weight: 700;">
+                <span class="h-100 w-100 d-flex align-items-center">
+                    <span> <img style="height: 20px;" src="http://localhost/icons/report.png" alt=""></span>
+                     <span class="mx-3">Report</span>
+                 </span>
+            </div>
+            <div (click)="Navigate('profile')" class="row m-0 mt-1 mx-4 mb-5" style="font-weight: 700;">
+                <span class="h-100 w-100 d-flex align-items-center">
+                    <span> <img style="height: 20px;" src="http://localhost/icons/user1.png" alt=""></span>
+                     <span class="mx-3">Profile</span>
+                 </span>
+            </div>
+            <div class="row m-0 mt-1 mx-4 mb-5" style="font-weight: 700;" (click)="SwitchDrawer(false)" (click)="Logout()" >
+                <span class="h-100 w-100 d-flex align-items-center">
+                    <span> <img style="height: 20px;" src="http://localhost/icons/power-off.png" alt=""></span>
+                     <span class="mx-3">Logout</span>
+                 </span>
+            </div>
+        </div>
+    </div>
+</Bitdrawer-v2>

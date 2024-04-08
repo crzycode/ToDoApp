@@ -1,0 +1,38 @@
+
+@media (min-width: 1025px) and (max-width: 2000px) {
+    .menu_bar_container{
+        display: block;
+        width: 20%;
+        
+    }
+    .destop_list_container{
+        width: 80%;
+        height: 100%;
+    }
+    .list_container{
+        display: flex;
+    }
+    .taskcard{
+        background-color: white; max-width: 350px; border-radius: 10px; margin-top:10px ; padding: 10px; overflow: auto;
+        margin-left: 10px;
+        
+    }
+    .bottom_button{
+        display: none;
+    }
+}
+@media (max-width: 480px) {
+    .menu_bar_container{
+        display: none;
+    }
+    .taskcard{
+        background-color: white; width: 90%; margin: auto; border-radius: 10px; margin-top:10px ; padding: 10px; overflow: auto;
+    }
+    .button{
+        width: 50%; height: 100%;
+        background-color: white;
+        outline: unset;
+        border: unset;
+
+    }
+}

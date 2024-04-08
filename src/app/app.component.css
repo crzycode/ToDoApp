@@ -1,0 +1,8 @@
+.button{
+    background-color: #ffc107;
+    outline: unset;
+    border: unset;
+    height: 40px;
+    color: white;
+    font-weight: 700;
+}

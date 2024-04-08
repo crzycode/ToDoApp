@@ -1,0 +1,75 @@
+
+<div class="navbar_container" >
+    <div style="max-width: 1600px; margin: auto; height: 60px;">
+        <div class="row px-1 p-0 m-0 align-items-center w-100 h-100">
+            <div class="col-2 h-100 d-flex align-items-center p-0">
+                <img src="http://localhost/icons/Left-navigation-black.svg" [routerLink]="['']" alt="" style="height: 25px;">
+            </div>
+            <div class="col-8 position-relative p-0 h-100 d-flex justify-content-center align-items-center">
+                <span style="position: absolute;" [routerLink]="['']">TODOs</span>
+            </div>
+            <div class="col-2 d-flex justify-content-start h-100">
+            </div>
+         
+        </div>
+    </div>
+</div>
+<div class="d-flex h-100 w-100">
+    <div class="menu_bar_container">
+        <div class="my-4 " (click)="Navigate('')" style="width: 100px; height: 100px; border-radius: 50px; background-color: white; overflow: hidden; position: relative;">
+         <span class="h-100 w-100 d-flex justify-content-center align-items-center">
+             <img style="height: 35px;" src="http://localhost/icons/home.png" alt="">
+         </span>
+     </div>
+     <div class="my-4 " (click)="Navigate('report')" style="width: 100px; height: 100px; border-radius: 50px; background-color: white; overflow: hidden; position: relative;">
+         <span class="h-100 w-100 d-flex justify-content-center align-items-center">
+             <img style="height: 35px;" src="http://localhost/icons/report.png" alt="">
+         </span>
+     </div>
+     <div class="my-4 " (click)="Navigate('profile')"  style="width: 100px; height: 100px; border-radius: 50px; background-color: white; overflow: hidden; position: relative;">
+         <span class="h-100 w-100 d-flex justify-content-center align-items-center">
+             <img style="height: 35px;" src="http://localhost/icons/user1.png" alt="">
+         </span>
+     </div>
+     <div class="my-4 " (click)="Logout()" style="width: 100px; height: 100px; border-radius: 50px; background-color: white; overflow: hidden; position: relative;">
+         <span class="h-100 w-100 d-flex justify-content-center align-items-center">
+             <img style="height: 35px;" src="http://localhost/icons/power-off.png" alt="">
+         </span>
+     </div>
+     
+     </div>
+    <div class="desktop_updateprofile_container">
+        <div class="wrapper">
+            <div class="row m-0 d-flex justify-content-center">
+                <span class="text-center" style="color:#ffc107; font-weight: 700;">Update Profile</span>
+            </div>
+            <div class="row mt-3 m-0">
+                <form style="width: 100%;padding: unset;" [formGroup]="ProfileForm">
+                <input formControlName="Email"  type="text" class="mt-3 w-100 input" placeholder="Email">
+                <span *ngIf="ValidatorObj.Email" class="mx-1" style="font-size: 12px; color: red;">This Field is Required</span>
+                <input formControlName="Name" type="text" class="mt-3 w-100 input" placeholder="Name">
+                <span *ngIf="ValidatorObj.Name" class="mx-1" style="font-size: 12px; color: red;">This Field is Required</span>
+                <input formControlName="Contact" type="text" class="mt-3 w-100 input" placeholder="Contact">
+                <span *ngIf="ValidatorObj.Contact" class="mx-1" style="font-size: 12px; color: red;">This Field is Required</span>
+                <div class="row mt-3">
+                    <div class="col-10" style="font-size: 12px;">Do you want to change the password</div>
+                    <div class="col-2">
+                        <mat-slide-toggle formControlName="Check" (change)="checkda($event)"></mat-slide-toggle>
+                    </div>
+                </div>
+                <input formControlName="Password" type="text" class="mt-3 w-100 input" placeholder="Password">
+                <span *ngIf="ValidatorObj.Password" class="mx-1" style="font-size: 12px; color: red;">This Field is Required</span>
+                <input formControlName="Confirmpassword"  type="text" class="mt-3 w-100 input" placeholder="Confirm Password">
+                <span *ngIf="ValidatorObj.Confirmpassword" class="mx-1" style="font-size: 12px; color: red;">This Field is Required</span>
+               
+                </form>
+                
+                <button class="mt-3 button" (click)="updateprofile()">Update Profile</button>
+              
+    
+            </div>
+        </div>
+     
+    </div>
+    
+</div>

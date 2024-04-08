@@ -1,0 +1,38 @@
+<div class="list_container" style="padding: 10px;">
+    <!-- <div class="menu_bar_container">
+       <div class="my-4 " (click)="Navigate('')" style="width: 100px; height: 100px; border-radius: 50px; background-color: white; overflow: hidden; position: relative;">
+        <span class="h-100 w-100 d-flex justify-content-center align-items-center">
+            <img style="height: 35px;" src="http://localhost/icons/home.png" alt="">
+        </span>
+    </div>
+    <div class="my-4 " (click)="Navigate('report')" style="width: 100px; height: 100px; border-radius: 50px; background-color: white; overflow: hidden; position: relative;">
+        <span class="h-100 w-100 d-flex justify-content-center align-items-center">
+            <img style="height: 35px;" src="http://localhost/icons/report.png" alt="">
+        </span>
+    </div>
+    <div class="my-4 " (click)="Navigate('profile')"  style="width: 100px; height: 100px; border-radius: 50px; background-color: white; overflow: hidden; position: relative;">
+        <span class="h-100 w-100 d-flex justify-content-center align-items-center">
+            <img style="height: 35px;" src="http://localhost/icons/user1.png" alt="">
+        </span>
+    </div>
+    <div class="my-4 " (click)="Logout()" style="width: 100px; height: 100px; border-radius: 50px; background-color: white; overflow: hidden; position: relative;">
+        <span class="h-100 w-100 d-flex justify-content-center align-items-center">
+            <img style="height: 35px;" src="http://localhost/icons/power-off.png" alt="">
+        </span>
+    </div>
+    
+    </div> -->
+    <div class="destop_list_container row" >
+        <div class="taskcard" *ngFor="let item of Data; index as i">
+            <div> <b>{{item.date}}</b><div>
+                <hr>
+                <div>{{item.task}}</div>
+        </div>
+    </div>
+    </div>
+    <div class="position-fixed p-1 bottom_button" style="bottom: 0px; background-color: white; height: 40px;">
+        <div style="display: flex; padding: unset; height: 100%;">
+            <button class="button" [routerLink]="['']" >Task</button>
+            <button class="button" style="color: #ffc107;">Finish</button>
+        </div>
+</div>

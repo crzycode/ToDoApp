@@ -1,0 +1,20 @@
+.navbar_container {
+    height: 60px;
+    width: 100%;
+    position: fixed !important;
+    top: 0;
+    z-index: 2;
+    color: white;
+    font-weight: 700;
+    overflow: hidden;
+    background-color: #ffc107;
+ 
+}
+@media (min-width: 1025px) and (max-width: 2000px) {
+ 
+}
+@media (max-width: 480px) {
+    .desktop_menu{
+        display: flex;
+    }
+}
